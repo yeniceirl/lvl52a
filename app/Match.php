@@ -20,4 +20,14 @@ class Match extends Model
     {
         return $this->belongsToMany('App\Team');
     }
+
+    /**
+     * Scored associated with the match.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function players()
+    {
+        return $this->belongsToMany('App\Player');
+    }
 }

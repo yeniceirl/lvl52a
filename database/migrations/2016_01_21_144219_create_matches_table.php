@@ -25,6 +25,16 @@ class CreateMatchesTable extends Migration
             $table->integer('team_id')->unsigned()->index();
             $table->foreign('team_id')->references('id')->on('teams');
         });
+
+        Schema::create('match_player', function (Blueprint $table) {
+            $table->integer('match_id')->unsigned()->index();
+            $table->foreign('match_id')->references('id')->on('matches');
+
+            $table->integer('player_id')->unsigned()->index();
+            $table->foreign('player_id')->references('id')->on('players');
+
+            $table->time('time')->index();
+        });
     }
 
     /**
@@ -34,6 +44,7 @@ class CreateMatchesTable extends Migration
      */
     public function down()
     {
+        Schema::drop('match_player');
         Schema::drop('match_team');
         Schema::drop('matches');
     }

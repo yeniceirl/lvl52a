@@ -19,4 +19,14 @@ class Player extends Model
     public function team(){
         return $this->belongsTo('App\Team');
     }
+
+    /**
+     * matches associated with the player
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function matches()
+    {
+        return $this->belongsToMany('App\Match');
+    }
 }
