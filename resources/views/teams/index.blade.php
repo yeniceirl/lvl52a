@@ -10,7 +10,7 @@
                         <tr>
                         @for ($j = 0; $j <=3; $j++)
                             <td width="24%" align="center">
-                                <a href="#">
+                                <a href="{{url('/teams', $teams[$i+$j]->name)}}">
                                     <img src="{{URL::asset('images/flags/32/'.$teams[$i+$j]->flag)}}" alt="flag">
                                     <br>
                                     {{ $teams[$i+$j]->name }}

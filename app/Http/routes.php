@@ -34,7 +34,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
 
     Route::get('/home', 'HomeController@index');
-
+    Route::get('/teams', 'TeamsController@index');
     Route::get('/teams/list', 'TeamsController@index');
     Route::get('/teams/groups', 'TeamsController@groups');
+    Route::get('/teams/matches', 'TeamsController@matches');
+    Route::get('/teams/{name}', 'TeamsController@showTeams');
 });
