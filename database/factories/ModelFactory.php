@@ -20,3 +20,12 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Player::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'no' => $faker->randomDigit(),
+        'pos' => $faker->randomElement(['Defenders', 'Midfielders', 'Forwards']),
+        'gs' => random_int(0, 10),
+    ];
+});

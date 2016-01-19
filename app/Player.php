@@ -4,12 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Team extends Model
+class Player extends Model
 {
     public $timestamps = false;
 
-    public function players() {
-        return $this->hasMany('App\Player');
+    public function team(){
+        return $this->belongsTo('App\Team');
     }
-
 }

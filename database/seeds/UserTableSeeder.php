@@ -24,6 +24,6 @@ class UserTableSeeder extends Seeder
             'level' => 'admin'
         ]);
 
-        factory(App\User::class, 50)->create();
+        factory(App\User::class, 10)->create();
     }
 }

@@ -39,5 +39,6 @@ class TeamsTableSeeder extends Seeder
         ];
 
         DB::table('teams')->insert($teams);
+
     }
 }

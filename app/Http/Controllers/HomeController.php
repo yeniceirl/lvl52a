@@ -25,5 +25,9 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+
+        //dd(Team::find(1)->players);
+
+        //dd(Player::find(3)->team);
     }
 }
