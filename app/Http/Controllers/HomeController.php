@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\Match;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,9 +25,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //return view('home');
 
-        //dd(Team::find(1)->players);
+        dd(Match::first()->teams->toarray());
 
         //dd(Player::find(3)->team);
     }
