@@ -14,7 +14,7 @@ class PayersTableSeeder extends Seeder
         $teams = \App\Team::all();
 
         foreach ($teams as $team) {
-            factory(App\Player::class, 25)->create([
+            factory(App\Player::class, 5)->create([
                 'team_id' => $team->id,
             ]);
         }
