@@ -25,4 +25,10 @@ class TeamsController extends Controller
         $teams = Team::all();
         return view('teams.index', ['teams' => $teams]);
     }
+
+    public function groups()
+    {
+        $teams = Team::all();
+        return view('teams.groups', ['teams' => $teams]);
+    }
 }

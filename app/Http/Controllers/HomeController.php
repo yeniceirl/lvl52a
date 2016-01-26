@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use App\Match;
+use App\Team;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -27,8 +28,7 @@ class HomeController extends Controller
     {
         //return view('home');
 
-        dd(Match::first()->teams->toarray());
+        dd(Team::all());
 
-        //dd(Player::find(3)->team);
     }
 }

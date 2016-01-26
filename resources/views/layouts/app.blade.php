@@ -54,7 +54,7 @@
                             </a>
                             <ul class="dropdown-menu" role="menu">
                                 <li> <a href="{{ url('/teams/list') }}"> List </a> </li>
-                                <li> <a href="{{ url('/teams/group') }}"> Groups </a> </li>
+                                <li> <a href="{{ url('/teams/groups') }}"> Groups </a> </li>
                                 <li> <a href="{{ url('/teams/match') }}"> Matches </a> </li>
                             </ul>
                         </li>
