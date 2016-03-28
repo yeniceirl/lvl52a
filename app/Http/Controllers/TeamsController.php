@@ -4,10 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Match;
 use App\Team;
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
 
 class TeamsController extends Controller
 {
@@ -51,6 +48,7 @@ class TeamsController extends Controller
     public function matches()
     {
         $matches = Match::all();
+        //dd ($matches);
         return view('teams.matches', ['matches' => $matches]);
     }
 
