@@ -16,10 +16,10 @@ class Team extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function players() {
+    public function players()
+    {
         return $this->hasMany('App\Player');
     }
-
 
     /**
      * matches associated with the team
@@ -29,5 +29,15 @@ class Team extends Model
     public function matches()
     {
         return $this->belongsToMany('App\Match');
+    }
+
+    /**
+     * goals of the player
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function goals()
+    {
+        return $this->hasMany('App\Goal');
     }
 }

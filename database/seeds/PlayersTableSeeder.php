@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class PayersTableSeeder extends Seeder
+class PlayersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

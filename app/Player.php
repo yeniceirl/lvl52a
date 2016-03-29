@@ -16,7 +16,8 @@ class Player extends Model
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function team(){
+    public function team()
+    {
         return $this->belongsTo('App\Team');
     }
 
@@ -28,5 +29,15 @@ class Player extends Model
     public function matches()
     {
         return $this->belongsToMany('App\Match');
+    }
+
+    /**
+     * Goals of player
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function goals()
+    {
+        return $this->hasMany('App\Goal');
     }
 }

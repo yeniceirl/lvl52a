@@ -1,0 +1,15 @@
+body {
+    font-family: 'Lato';
+}
+
+.fa-btn {
+    margin-right: 6px;
+}
+
+.match {
+    padding: 5px 0px !important;
+}
+
+.match td {
+    padding: 0px !important;
+}

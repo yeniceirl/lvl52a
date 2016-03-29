@@ -30,4 +30,14 @@ class Match extends Model
     {
         return $this->belongsToMany('App\Player');
     }
+
+    /**
+     * goals of match
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function goals()
+    {
+        return $this->hasMany('App\Goal');
+    }
 }
